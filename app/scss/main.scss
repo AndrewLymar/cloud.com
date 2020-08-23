@@ -1,6 +1,5 @@
 @import "vars";
 @import "fonts";
-@import "grid";
 
 body {
     font-size: 16px;
@@ -23,9 +22,17 @@ body {
     cursor: pointer;
 }
 
+.img-container {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .button--started {
-     color: #3A79FF;
+    color: #3A79FF;
     background: #D2E1FF;
+
     &:hover {
         background: #fff;
         border: 1px solid #3A79FF;
@@ -35,6 +42,7 @@ body {
 .button--more {
     color: #D43F3F;
     background: #FFD7D7;
+
     &:hover {
         background: #fff;
         border: 1px solid #D43F3F;
@@ -200,11 +208,21 @@ body {
         font-size: 10px;
         line-height: 12px;
         letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &-small--white {
+        color: #fff;
     }
 
     &--large {
+        margin-top: 20px;
         font-size: 24px;
         line-height: 30px;
+    }
+
+    &-large--white {
+        color: #fff;
     }
 }
 
@@ -276,15 +294,27 @@ body {
 .s-plan {
     padding-top: 170px;
     padding-bottom: 170px;
+    background: #F5F8FF;
+
+    @media only screen and (max-width: $sm) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .s-about {
     padding-top: 170px;
     padding-bottom: 170px;
+
+    @media only screen and (max-width: $sm) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .apps {
     margin-top: 92px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .app {
@@ -321,6 +351,308 @@ body {
 
 .about-buttons {
     margin-top: 92px;
+
+    &__divider {
+        width: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-top: 1px solid #DAE4FE;
+
+        @media only screen and (max-width: $sm) {
+            display: none;
+        }
+    }
+
+    &__text {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #ADB3CB;
+
+        @media only screen and (max-width: $sm) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
 }
 
+.s-stats {}
+
+.stats {
+    padding: 65px 90px;
+    letter-spacing: 0.03em;
+}
+
+.customers {
+    background: #6586FF;
+
+    &__text {
+        margin-top: 25px;
+        max-width: 260px;
+        color: #fff;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 83px;
+    }
+
+    &__description {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23px;
+    }
+}
+
+.users {
+    background: #E4ECFF;
+
+    &__text {
+        margin-top: 25px;
+        max-width: 260px;
+        color: #5E80FF;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 83px;
+    }
+
+    &__description {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23px;
+    }
+}
+
+.s-resources {
+    padding-top: 104px;
+    padding-bottom: 104px;
+    background: #F5F8FF;
+
+    @media only screen and (max-width: $sm) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.plan {
+    margin-top: 90px;
+    padding: 65px 35px;
+    background: #fff;
+
+    &__second-gallery {
+        width: 30%;
+        align-content: space-between;
+    }
+
+    &__images {
+        position: relative;
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0px 15px 100px #E5EBF8;
+
+        @media only screen and (max-width: $md) {
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 25px;
+        }
+
+        @media only screen and (max-width: $sm) {
+            max-width: 100%;
+        }
+    }
+
+    &__image-big-container {
+        position: relative;
+    }
+
+    &__image--big {
+        width: 65%;
+        max-height: 267px;
+        margin-right: 12px;
+
+        @media only screen and (max-width: $lg) {
+            width: 100%;
+            margin-right: 0;
+            max-height: 100%;
+        }
+    }
+
+    &__search {
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        top: 33%;
+        left: 33%;
+        border-radius: 100%;
+        background: #FFF;
+    }
+
+    &__image--little {
+        max-height: 126px;
+        height: 50%;
+
+        @media only screen and (max-width: $lg) {
+            max-height: 100%;
+            height: auto;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: $sm) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text {
+        @media only screen and (max-width: $lg) {
+            margin-top: 70px !important;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 45px;
+        color: #3D4F9F;
+    }
+
+    &__description {
+        margin-top: 32px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        color: #8D96BD;
+    }
+
+    &__bottom {
+        margin-top: auto;
+
+        @media only screen and (max-width: $lg) {
+            margin-top: 30px;
+        }
+    }
+
+    &__add {
+        margin-left: 23px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16px;
+        color: #A6B6DA;
+
+        @media only screen and (max-width: $sm) {
+            margin-top: 25px;
+            margin-left: 0;
+        }
+    }
+}
+
+.s-help {
+    padding-top: 175px;
+    padding-bottom: 175px;
+
+    @media only screen and (max-width: $sm) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.questions {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.question {
+    width: 100%;
+    max-width: 740px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D8E3FE;
+
+    &__img {
+        margin-left: 25px;
+    }
+
+    &__outer {
+        cursor: pointer;
+    }
+
+    &__inner {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        padding-left: 90px;
+        padding-right: 10px;
+    }
+
+    &__title {
+        margin-left: 25px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        color: #8E96B7;
+    }
+
+    &__text {
+        max-width: 390px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        color: #8D96BD;
+    }
+
+    &__button {
+        background: #E8ECF4;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 16px;
+        color: #7382A3;
+
+        &:hover {
+            background: #fff;
+            border: 1px solid #3A79FF;
+        }
+    }
+}
+
+.s-started {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background: #6384FF;
+
+    &__title {
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 60px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__description {
+        max-width: 710px;
+        margin-top: 30px;
+        font-size: 15px;
+        line-height: 29px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+    }
+}
+
+
 @import "media";
+@import "grid";
