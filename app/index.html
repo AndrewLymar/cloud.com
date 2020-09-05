@@ -7,20 +7,25 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="menu header__menu">
             <div class="container">
-                <div class="flex-row jc-between ai-center">
+                <div class="menu__inn flex-row jc-between ai-center">
                     <div class="flex-row ai-center">
                         <a href="#home" class="logo menu__logo flex-row ai-center">
                             <svg width="34" height="21" fill="#5E81FE">
                                 <use xlink:href="img/sprite.svg#logo"></use>
                             </svg>
                         </a>
-                        <ul class="menu__list">
+                        <svg width="42" height="42" fill="#34C759" class="menu__icon">
+                            <use xlink:href="img/sprite.svg#customers"></use>
+                        </svg>
+                        <ul class="menu__bot menu__list">
                             <li class="menu__item active">
                                 <a class="menu__link active" href="#home">Home</a>
                             </li>
@@ -39,7 +44,7 @@
                         </ul>
                     </div>
                     <div class="flex-row ai-center">
-                        <ul class="menu__list">
+                        <ul class="menu__top  menu__list menu__list-socials">
                             <li class="menu__item menu-social flex-row ai-center">
                                 <svg width="8" height="17" fill="#B6BAC7">
                                     <use xlink:href="img/sprite.svg#facebook"></use>
@@ -68,18 +73,57 @@
                 </div>
             </div>
         </nav>
-        <div class="hero flex-col centered ta-center">
-            <div class="hero__text main-text">
-                <div class="hero__slogan main-text__slogan">
-                    Plan your life
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero flex-col centered ta-center">
+                        <div class="hero__text main-text">
+                            <div class="hero__slogan main-text__slogan">
+                                Plan your life
+                            </div>
+                            <h1 class="hero__title main-text__title">
+                                Increase your <span>productivity</span>
+                            </h1>
+                            <div class="hero__description main-text__description">
+                                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="hero__title main-text__title">
-                    Increase your <span>productivity</span>
-                </h1>
-                <div class="hero__description main-text__description">
-                    Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+                <div class="swiper-slide">
+                    <div class="hero flex-col centered ta-center">
+                        <div class="hero__text main-text">
+                            <div class="hero__slogan main-text__slogan">
+                                Plan your life
+                            </div>
+                            <h1 class="hero__title main-text__title">
+                                Increase your <span>productivity</span>
+                            </h1>
+                            <div class="hero__description main-text__description">
+                                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero flex-col centered ta-center">
+                        <div class="hero__text main-text">
+                            <div class="hero__slogan main-text__slogan">
+                                Plan your life
+                            </div>
+                            <h1 class="hero__title main-text__title">
+                                Increase your <span>productivity</span>
+                            </h1>
+                            <div class="hero__description main-text__description">
+                                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </header>
     <section class="section s-brands">
@@ -370,6 +414,84 @@
             </div>
         </div>
     </section>
+    <section class="section s-subscription">
+        <div class="container">
+            <div class="flex-row jc-around ai-center">
+                <div class="s-subscription__text">
+                    <div class="s-subscription__title ta-center-md">Sign up for newsletter</div>
+                    <div class="s-subscription__description ta-center-md">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.</div>
+                </div>
+                <form action="" class="s-subscription__form subscription-form flex-row ai-center jc-center-md">
+                    <input type="text" name="email" value="" class="subscription-form__input" placeholder="Email address">
+                    <button class="button subscription-form__button">Save me</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <nav class="menu footer__menu">
+                <div class="container">
+                    <div class="flex-row jc-between ai-center">
+                        <div class="flex-row ai-center">
+                            <a href="#home" class="logo menu__logo flex-row ai-center">
+                                <svg width="34" height="21" fill="#5E81FE">
+                                    <use xlink:href="img/sprite.svg#logo"></use>
+                                </svg>
+                            </a>
+                            <ul class="menu__list">
+                                <li class="menu__item active">
+                                    <a class="menu__link active" href="#home">Home</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#about">Blog</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#tariffs">Features</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#features">Pricing</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#download">Documentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-row ai-center">
+                            <ul class="menu__list">
+                                <li class="menu__item menu-social flex-row ai-center">
+                                    <svg width="8" height="17" fill="#B6BAC7">
+                                        <use xlink:href="img/sprite.svg#facebook"></use>
+                                    </svg>
+                                </li>
+                                <li class="menu__item menu-social flex-row ai-center">
+                                    <svg width="14" height="11" fill="#B6BAC7">
+                                        <use xlink:href="img/sprite.svg#telegram"></use>
+                                    </svg>
+                                </li>
+                                <li class="menu__item menu-social flex-row ai-center">
+                                    <svg width="16" height="13" fill="#B6BAC7">
+                                        <use xlink:href="img/sprite.svg#twitter"></use>
+                                    </svg>
+                                </li>
+                                <li class="menu__item menu-social flex-row ai-center">
+                                    <svg width="16" height="12" fill="#B6BAC7">
+                                        <use xlink:href="img/sprite.svg#medium"></use>
+                                    </svg>
+                                </li>
+                            </ul>
+                            <button class="button button--started menu__button">
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="footer__copy ta-center-sm">
+                Copyright © 2020 by Random site
+            </div>
+        </div>
+    </footer>
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">

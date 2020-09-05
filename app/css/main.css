@@ -47,6 +47,15 @@ body {
     background: #fff;
     border: 1px solid #D43F3F; }
 
+.swiper-container {
+  width: 100%;
+  height: 100%; }
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .header {
   height: 100vh;
   background: #F4F7FF; }
@@ -57,11 +66,6 @@ body {
   padding-bottom: 18px;
   background: #FFFFFF;
   border-bottom: 1px solid #D8E3FE; }
-  .menu a {
-    text-decoration: none; }
-    @media only screen and (max-width: 768px) {
-      .menu a {
-        color: #fff; } }
   @media only screen and (max-width: 768px) {
     .menu {
       position: fixed;
@@ -70,6 +74,31 @@ body {
       background: #000;
       color: #fff;
       z-index: 100; } }
+  .menu .container {
+    width: 100%;
+    padding: 0; }
+  .menu a {
+    text-decoration: none; }
+    @media only screen and (max-width: 768px) {
+      .menu a {
+        color: #fff; } }
+  .menu__inn {
+    position: relative; }
+  @media only screen and (max-width: 768px) {
+    .menu__bot {
+      width: 100%;
+      padding-top: 25px; } }
+  @media only screen and (max-width: 768px) {
+    .menu__bot .menu__item {
+      margin-right: 0;
+      order: 1; } }
+  @media only screen and (max-width: 768px) {
+    .menu__top {
+      margin-top: auto; } }
+  @media only screen and (max-width: 768px) {
+    .menu__top {
+      height: 100%;
+      order: 2; } }
   .menu__logo {
     margin-right: 73px; }
   .menu__list {
@@ -79,7 +108,7 @@ body {
       .menu__list {
         display: none;
         position: absolute;
-        top: 88px;
+        top: 64px;
         left: 0;
         width: 100%;
         flex-direction: column;
@@ -88,6 +117,10 @@ body {
         padding-right: 25px;
         padding-bottom: 25px;
         background: #000; } }
+  @media only screen and (max-width: 768px) {
+    .menu__list-socials {
+      flex-direction: row;
+      justify-content: center; } }
   .menu__item {
     margin-right: 42px;
     transition: 1s all;
@@ -142,10 +175,8 @@ body {
 .sticky-menu {
   position: fixed;
   width: 100%;
-  margin-top: -75px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background: #000;
   z-index: 100; }
 
 .section__title {
@@ -429,6 +460,9 @@ body {
   border-bottom: 1px solid #D8E3FE; }
   .question__img {
     margin-left: 25px; }
+    @media only screen and (max-width: 480px) {
+      .question__img {
+        margin-left: 0; } }
   .question__outer {
     cursor: pointer; }
   .question__inner {
@@ -437,6 +471,10 @@ body {
     margin-bottom: 30px;
     padding-left: 90px;
     padding-right: 10px; }
+    @media only screen and (max-width: 480px) {
+      .question__inner {
+        padding-left: 10px;
+        padding-right: 10px; } }
   .question__title {
     margin-left: 25px;
     font-size: 15px;
@@ -460,6 +498,9 @@ body {
     .question__button:hover {
       background: #fff;
       border: 1px solid #3A79FF; }
+    @media only screen and (max-width: 480px) {
+      .question__button {
+        margin-top: 25px; } }
 
 .s-started {
   padding-top: 90px;
@@ -473,11 +514,114 @@ body {
       font-weight: 600; }
   .s-started__description {
     max-width: 710px;
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 15px;
     line-height: 29px;
     letter-spacing: 0.03em;
     color: #FFFFFF; }
+  .s-started__buttons {
+    margin-top: 40px; }
+
+.button-pricing,
+.button-documentation {
+  border: 1px solid #A0B4FF;
+  border-radius: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px; }
+
+.button-pricing {
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #565F82; }
+  .button-pricing:hover {
+    background: none;
+    color: #C7D3FF; }
+
+.button-documentation {
+  background: none;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #C7D3FF; }
+  .button-documentation:hover {
+    background: #fff;
+    color: #565F82; }
+
+.s-subscription {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  .s-subscription__text {
+    max-width: 360px; }
+  .s-subscription__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #3D4F9F; }
+  .s-subscription__description {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: 0.03em;
+    color: #8D96BD; }
+
+@media only screen and (max-width: 768px) {
+  .subscription-form {
+    margin-top: 50px; } }
+
+.subscription-form__input {
+  min-width: 280px;
+  margin-right: 14px;
+  padding: 20px;
+  background: #EFEFF7;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #7A85AD; }
+  @media only screen and (max-width: 480px) {
+    .subscription-form__input {
+      margin-right: 0; } }
+
+.subscription-form__button {
+  min-width: 184px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #4D6CE1;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2); }
+  @media only screen and (max-width: 480px) {
+    .subscription-form__button {
+      margin-top: 30px; } }
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-top: 1px solid #D8E3FE; }
+  @media only screen and (max-width: 480px) {
+    .footer {
+      padding-top: 25px;
+      padding-bottom: 25px; } }
+  .footer__menu {
+    border: 0; }
+  .footer__copy {
+    margin-top: 38px;
+    margin-left: 75px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #AEB8D0; }
+    @media only screen and (max-width: 480px) {
+      .footer__copy {
+        margin: 0; } }
 
 .container {
   width: 100%;
