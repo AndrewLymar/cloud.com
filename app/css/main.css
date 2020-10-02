@@ -47,7 +47,7 @@ body {
     background: #fff;
     border: 1px solid #D43F3F; }
 
-.swiper-container {
+.swiper-hero {
   width: 100%;
   height: 100%; }
 
@@ -56,9 +56,22 @@ body {
   justify-content: center;
   align-items: center; }
 
+.swiper-pagination {
+  bottom: 150px !important; }
+
+@media only screen and (max-width: 480px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; } }
+
+.s-reviews .swiper-button-prev,
+.s-reviews .swiper-button-next {
+  display: none; }
+
 .header {
   height: 100vh;
-  background: #F4F7FF; }
+  background: url("img/header-bg.jpg") #F4F7FF no-repeat;
+  background-size: cover; }
 
 .menu {
   position: relative;
@@ -202,7 +215,7 @@ body {
 
 .main-text__slogan {
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -217,6 +230,9 @@ body {
   .main-text__title span {
     font-weight: 700; }
 
+.main-text__title--strong {
+  font-weight: 700; }
+
 .main-text__description {
   margin-top: 28px;
   font-size: 15px;
@@ -225,7 +241,11 @@ body {
   color: #8D96BD; }
 
 .hero {
+  margin-top: -90px;
   height: 100%; }
+  @media only screen and (max-width: 768px) {
+    .hero {
+      margin-top: 25px; } }
   .hero__text {
     max-width: 590px; }
 
@@ -482,6 +502,10 @@ body {
     line-height: 19px;
     letter-spacing: 0.03em;
     color: #8E96B7; }
+    @media only screen and (max-width: 480px) {
+      .question__title {
+        margin-left: 10px;
+        font-size: 12px; } }
   .question__text {
     max-width: 390px;
     font-family: 'Roboto', sans-serif;
@@ -501,6 +525,17 @@ body {
     @media only screen and (max-width: 480px) {
       .question__button {
         margin-top: 25px; } }
+
+.s-reviews {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background: #EDF2FF; }
+
+.review__text {
+  /*
+        padding: 45px 70px;
+        background: #fff;
+        */ }
 
 .s-started {
   padding-top: 90px;
@@ -612,7 +647,6 @@ body {
     border: 0; }
   .footer__copy {
     margin-top: 38px;
-    margin-left: 75px;
     font-size: 12px;
     font-weight: 500;
     line-height: 15px;

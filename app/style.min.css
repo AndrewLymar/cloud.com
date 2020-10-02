@@ -262,7 +262,7 @@ body {
   border: 1px solid #d43f3f;
 }
 
-.swiper-container {
+.swiper-hero {
   width: 100%;
   height: 100%;
 }
@@ -279,9 +279,25 @@ body {
   align-items: center;
 }
 
+.swiper-pagination {
+  bottom: 150px!important;
+}
+
+@media only screen and (max-width:480px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+.s-reviews .swiper-button-next,
+.s-reviews .swiper-button-prev {
+  display: none;
+}
+
 .header {
   height: 100vh;
-  background: #f4f7ff;
+  background: url("img/header-bg.jpg") 0 0/cover no-repeat #f4f7ff;
 }
 
 .menu {
@@ -469,14 +485,6 @@ body {
   display: none;
 }
 
-@media only screen and (max-width:768px) {
-  .menu-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 .sticky-menu {
   position: fixed;
   width: 100%;
@@ -513,7 +521,7 @@ body {
 
 .main-text__slogan {
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 12px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -528,7 +536,8 @@ body {
   color: #3d4f9f;
 }
 
-.main-text__title span {
+.main-text__title span,
+.main-text__title--strong {
   font-weight: 700;
 }
 
@@ -541,7 +550,20 @@ body {
 }
 
 .hero {
+  margin-top: -90px;
   height: 100%;
+}
+
+@media only screen and (max-width:768px) {
+  .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .hero {
+    margin-top: 25px;
+  }
 }
 
 .hero__text {
@@ -903,10 +925,6 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
-
-  .question__button {
-    margin-top: 25px;
-  }
 }
 
 .question__title {
@@ -916,6 +934,17 @@ body {
   line-height: 19px;
   letter-spacing: .03em;
   color: #8e96b7;
+}
+
+@media only screen and (max-width:480px) {
+  .question__title {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  .question__button {
+    margin-top: 25px;
+  }
 }
 
 .question__text {
@@ -938,6 +967,12 @@ body {
 .question__button:hover {
   background: #fff;
   border: 1px solid #3a79ff;
+}
+
+.s-reviews {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background: #edf2ff;
 }
 
 .s-started {
@@ -1085,7 +1120,6 @@ body {
 
 .footer__copy {
   margin-top: 38px;
-  margin-left: 75px;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
