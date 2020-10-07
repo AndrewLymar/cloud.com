@@ -18,6 +18,14 @@ $(function () {
         offsetToSticky: 50,
         closeIconClassName: ".close-menu-icon"
     });
+    
+    $(".footer__menu").mobileMenu({
+        menuIconClassName: ".menu__icon",
+        mobileResolution: 1,
+        menuType: "custom",
+        offsetToSticky: 50,
+        closeIconClassName: ".close-menu-icon"
+    });
 
     var swiper = new Swiper('.swiper-hero', {
         pagination: {
@@ -36,6 +44,7 @@ $(function () {
     });
     
     var swiper = new Swiper('.swiper-reviews', {
+        autoHeight: true,
         pagination: {
             el: '.swiper-pagination'
         },

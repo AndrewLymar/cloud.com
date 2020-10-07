@@ -60,10 +60,6 @@ body {
     align-items: center;
 }
 
-.swiper-pagination {
-    bottom: 150px !important;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
     @media only screen and (max-width: $sm) {
@@ -72,6 +68,7 @@ body {
 }
 
 .s-reviews {
+
     .swiper-button-prev,
     .swiper-button-next {
         display: none;
@@ -86,15 +83,13 @@ body {
 
 .menu {
     position: relative;
-    padding-top: 18px;
-    padding-bottom: 18px;
     background: #FFFFFF;
     border-bottom: 1px solid #D8E3FE;
 
     @media only screen and (max-width: $md) {
         position: fixed;
         width: 100%;
-        padding: 20px 25px;
+        padding: 0;
         background: #000;
         color: #fff;
         z-index: 100;
@@ -115,13 +110,14 @@ body {
 
     &__inn {
         position: relative;
+        padding: 20px 25px;
     }
 
     &__bot {
 
         @media only screen and (max-width: $md) {
             width: 100%;
-            padding-top: 25px;
+            padding-top: 80px;
         }
 
         .menu__item {
@@ -173,6 +169,7 @@ body {
         @media only screen and (max-width: $md) {
             flex-direction: row;
             justify-content: center;
+            padding-top: 50px;
         }
     }
 
@@ -239,6 +236,11 @@ body {
 
     &__button {
         margin-left: 45px;
+
+        @media only screen and (max-width: $md) {
+            margin-left: 0px;
+            padding: 10px 10px;
+        }
     }
 
     &.active {
@@ -262,8 +264,6 @@ body {
 .sticky-menu {
     position: fixed;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
     z-index: 100;
 }
 
@@ -333,7 +333,7 @@ body {
 }
 
 .hero {
-    margin-top: -90px;
+    margin-top: -83px;
     height: 100%;
 
     @media only screen and (max-width: $md) {
@@ -342,6 +342,9 @@ body {
 
     &__text {
         max-width: 590px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 160px !important;
     }
 }
 
@@ -730,14 +733,47 @@ body {
     padding-top: 110px;
     padding-bottom: 110px;
     background: #EDF2FF;
+
+    .swiper-pagination.swiper-pagination-bullets {
+        bottom: -3px !important;
+    }
 }
 
 .review {
+    position: relative;
+    box-shadow: 0px 5px 50px #F3F5FA;
+
+    @media only screen and (max-width: $md) {
+        margin-top: 50px;
+    }
+
     &__text {
-        /*
         padding: 45px 70px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: #676F95;
         background: #fff;
-        */
+        
+        @media only screen and (max-width: $sm) {
+        padding: 40px 30px;
+    }
+    }
+
+    &__img {
+        position: relative;
+        width: 62px;
+        height: 62px;
+        bottom: 30px;
+        border-radius: 100%;
+        background: #fff;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 100%;
+        }
     }
 }
 

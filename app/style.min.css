@@ -279,10 +279,6 @@ body {
   align-items: center;
 }
 
-.swiper-pagination {
-  bottom: 150px!important;
-}
-
 @media only screen and (max-width:480px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -302,8 +298,6 @@ body {
 
 .menu {
   position: relative;
-  padding-top: 18px;
-  padding-bottom: 18px;
   background: #fff;
   border-bottom: 1px solid #d8e3fe;
 }
@@ -321,7 +315,7 @@ body {
   .menu {
     position: fixed;
     width: 100%;
-    padding: 20px 25px;
+    padding: 0;
     background: #000;
     color: #fff;
     z-index: 100;
@@ -330,18 +324,19 @@ body {
   .menu a {
     color: #fff;
   }
-
-  .menu__bot {
-    width: 100%;
-    padding-top: 25px;
-  }
 }
 
 .menu__inn {
   position: relative;
+  padding: 20px 25px;
 }
 
 @media only screen and (max-width:768px) {
+  .menu__bot {
+    width: 100%;
+    padding-top: 80px;
+  }
+
   .menu__bot .menu__item {
     margin-right: 0;
     -webkit-box-ordinal-group: 2;
@@ -422,6 +417,10 @@ body {
   display: none;
 }
 
+.menu__button {
+  margin-left: 45px;
+}
+
 @media only screen and (max-width:768px) {
   .menu__list {
     display: none;
@@ -450,6 +449,7 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    padding-top: 50px;
   }
 
   .menu__item {
@@ -466,10 +466,11 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
-}
 
-.menu__button {
-  margin-left: 45px;
+  .menu__button {
+    margin-left: 0;
+    padding: 10px;
+  }
 }
 
 .menu.active {
@@ -488,8 +489,6 @@ body {
 .sticky-menu {
   position: fixed;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
   z-index: 100;
 }
 
@@ -550,7 +549,7 @@ body {
 }
 
 .hero {
-  margin-top: -90px;
+  margin-top: -83px;
   height: 100%;
 }
 
@@ -568,6 +567,10 @@ body {
 
 .hero__text {
   max-width: 590px;
+}
+
+.hero .swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 160px!important;
 }
 
 .s-brands {
@@ -973,6 +976,53 @@ body {
   padding-top: 110px;
   padding-bottom: 110px;
   background: #edf2ff;
+}
+
+.s-reviews .swiper-pagination.swiper-pagination-bullets {
+  bottom: -3px!important;
+}
+
+.review {
+  position: relative;
+  -webkit-box-shadow: 0 5px 50px #f3f5fa;
+  box-shadow: 0 5px 50px #f3f5fa;
+}
+
+@media only screen and (max-width:768px) {
+  .review {
+    margin-top: 50px;
+  }
+}
+
+.review__text {
+  padding: 45px 70px;
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: .03em;
+  color: #676f95;
+  background: #fff;
+}
+
+@media only screen and (max-width:480px) {
+  .review__text {
+    padding: 40px 30px;
+  }
+}
+
+.review__img {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  bottom: 30px;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.review__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
 }
 
 .s-started {

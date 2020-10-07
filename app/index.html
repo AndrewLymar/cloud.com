@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <nav class="menu header__menu">
             <div class="container">
                 <div class="menu__inn flex-row jc-between ai-center">
@@ -22,24 +22,24 @@
                                 <use xlink:href="img/sprite.svg#logo"></use>
                             </svg>
                         </a>
-                        <svg width="42" height="42" fill="#34C759" class="menu__icon">
-                            <use xlink:href="img/sprite.svg#customers"></use>
+                        <svg width="36" height="36" fill="#5E81FE" class="menu__icon">
+                            <use xlink:href="img/sprite.svg#menu"></use>
                         </svg>
                         <ul class="menu__bot menu__list">
                             <li class="menu__item active">
                                 <a class="menu__link active" href="#home">Home</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#about">Blog</a>
+                                <a class="menu__link" href="#brands">Brands</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#tariffs">Features</a>
+                                <a class="menu__link" href="#plan">Plan</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#features">Pricing</a>
+                                <a class="menu__link" href="#blog">Blog</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#download">Documentation</a>
+                                <a class="menu__link" href="#documentation">Documentation</a>
                             </li>
                         </ul>
                     </div>
@@ -126,7 +126,7 @@
             <div class="swiper-button-next"></div>
         </div>
     </header>
-    <section class="section s-brands">
+    <section class="section s-brands" id="brands">
         <div class="container">
             <div class="brands">
                 <div class="brands__item flex-row centered">
@@ -160,7 +160,7 @@
             </div>
         </div>
     </section>
-    <section class="section s-plan">
+    <section class="section s-plan" id="plan">
         <div class="container flex-row flex-col-md jc-between ai-center">
             <div class="col-5 col-12-md ta-center-md">
                 <div class="main-text">
@@ -293,7 +293,7 @@
             </div>
         </div>
     </section>
-    <section class="section s-resources">
+    <section class="section s-resources" id="blog">
         <div class="container">
             <div class="section__title ta-center">
                 <div class="section__title--small">
@@ -337,7 +337,7 @@
             </div>
         </div>
     </section>
-    <section class="section s-reviews">
+    <section class="section s-reviews" id="reviews">
         <div class="container flex-row flex-col-md jc-between">
             <div class="col-5 col-12-md">
                 <div class="main-text">
@@ -352,7 +352,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-12-md">
+            <div class="col-5 col-12-md">
                 <div class="swiper-reviews swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -361,37 +361,27 @@
                                     Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
                                 </div>
                                 <div class="review__img">
-
+                                    <img src="img/reviewer1.jpg" alt="reviewer">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="hero flex-col centered ta-center">
-                                <div class="hero__text main-text">
-                                    <div class="hero__slogan main-text__slogan">
-                                        Plan your life
-                                    </div>
-                                    <h1 class="hero__title main-text__title">
-                                        Lorem en <span>etur</span>
-                                    </h1>
-                                    <div class="hero__description main-text__description">
-                                        Et vel modus congue vituperata. Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.
-                                    </div>
+                            <div class="review flex-col centered ta-center">
+                                <div class="review__text">
+                                    Eum ne, erat persecuti consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                                </div>
+                                <div class="review__img">
+                                    <img src="img/reviewer2.jpg" alt="reviewer">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="hero flex-col centered ta-center">
-                                <div class="hero__text main-text">
-                                    <div class="hero__slogan main-text__slogan">
-                                        Plan your life
-                                    </div>
-                                    <h1 class="hero__title main-text__title">
-                                        En loret <span>atqui</span>
-                                    </h1>
-                                    <div class="hero__description main-text__description">
-                                        Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.
-                                    </div>
+                            <div class="review flex-col centered ta-center">
+                                <div class="review__text">
+                                    Persecuti consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti tractatos.
+                                </div>
+                                <div class="review__img">
+                                    <img src="img/reviewer3.jpg" alt="reviewer">
                                 </div>
                             </div>
                         </div>
@@ -403,7 +393,7 @@
             </div>
         </div>
     </section>
-    <section class="section s-help">
+    <section class="section s-help" id="documentation">
         <div class="container">
             <div class="flex-col ai-center">
                 <div class="section__title ta-center">
@@ -457,12 +447,12 @@
                                 <use xlink:href="img/sprite.svg#arrow"></use>
                             </svg>
                             <div class="question__title flex-row centered">
-                                Vis rebum error graecis ea, id sit postea acc?
+                                Rebum error ea graecis , id sit postea acc?
                             </div>
                         </div>
                         <div class="question__inner flex-row jc-between ai-center">
                             <div class="question__text">
-                                Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.
+                                Persecuti vocibus eum ne, consectetuer voluptatibus ut nam erat. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret Quidam.
                             </div>
                             <button class="button question__button">
                                 Go to documentation
@@ -528,16 +518,16 @@
                                     <a class="menu__link active" href="#home">Home</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#about">Blog</a>
+                                    <a class="menu__link" href="#brands">Brands</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#tariffs">Features</a>
+                                    <a class="menu__link" href="#plan">Plan</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#features">Pricing</a>
+                                    <a class="menu__link" href="#blog">Blog</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="#download">Documentation</a>
+                                    <a class="menu__link" href="#documentation">Documentation</a>
                                 </li>
                             </ul>
                         </div>
