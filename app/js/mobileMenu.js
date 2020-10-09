@@ -83,7 +83,7 @@
             if (options.menuType == "custom") {
                 customMenu();
             }
-            /*
+            
             $menuLinks.each(function () {
                 var currLink = $(this);
                 var refElement = $(currLink.attr("href"));
@@ -92,13 +92,11 @@
                     currLink.addClass("active");
                 }
             });
-            */
         }
 
         function scrollTo(event) {
             var target = this.hash;
             var $target = $(target);
-            //event.preventDefault();
             if ($(document).width() <= options.mobileResolution) {
                 hideMenu();
             }
@@ -108,7 +106,7 @@
             $(this).addClass("active");
 
             $("html, body").stop().animate({
-                'scrollTop': $target.offset().top - offset
+                'scrollTop': $target.offset().top - offset+3
             }, 500, "swing", function () {});
         }
 

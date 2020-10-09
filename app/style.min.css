@@ -279,13 +279,6 @@ body {
   align-items: center;
 }
 
-@media only screen and (max-width:480px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-}
-
 .s-reviews .swiper-button-next,
 .s-reviews .swiper-button-prev {
   display: none;
@@ -294,6 +287,10 @@ body {
 .header {
   height: 100vh;
   background: url("img/header-bg.jpg") 0 0/cover no-repeat #f4f7ff;
+}
+
+.header .swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 300px!important;
 }
 
 .menu {
@@ -312,6 +309,15 @@ body {
 }
 
 @media only screen and (max-width:768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .header .swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 100px!important;
+  }
+
   .menu {
     position: fixed;
     width: 100%;
@@ -377,7 +383,6 @@ body {
   margin-right: 0;
 }
 
-.menu__item.active .menu__link,
 .menu__item:hover .menu__link {
   color: #5e81fe;
 }
@@ -393,6 +398,10 @@ body {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
+}
+
+.menu__link.active {
+  color: #5e81fe;
 }
 
 .menu .menu-social {
@@ -567,10 +576,6 @@ body {
 
 .hero__text {
   max-width: 590px;
-}
-
-.hero .swiper-container-horizontal>.swiper-pagination-bullets {
-  bottom: 160px!important;
 }
 
 .s-brands {

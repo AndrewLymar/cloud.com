@@ -62,7 +62,7 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-    @media only screen and (max-width: $sm) {
+    @media only screen and (max-width: $md) {
         display: none;
     }
 }
@@ -79,6 +79,14 @@ body {
     height: 100vh;
     background: url("img/header-bg.jpg") #F4F7FF no-repeat;
     background-size: cover;
+
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 300px !important;
+
+        @media only screen and (max-width: $md) {
+           bottom: 100px !important;
+        }
+    }
 }
 
 .menu {
@@ -187,7 +195,6 @@ body {
             margin-right: 0;
         }
 
-        &.active,
         &:hover {
             .menu__link {
                 color: #5E81FE;
@@ -207,6 +214,10 @@ body {
 
         @media only screen and (max-width: $md) {
             font-size: 20px;
+        }
+        
+        &.active {
+            color: #5E81FE;
         }
     }
 
@@ -342,9 +353,6 @@ body {
 
     &__text {
         max-width: 590px;
-    }
-    .swiper-container-horizontal>.swiper-pagination-bullets {
-        bottom: 160px !important;
     }
 }
 
@@ -755,10 +763,10 @@ body {
         letter-spacing: 0.03em;
         color: #676F95;
         background: #fff;
-        
+
         @media only screen and (max-width: $sm) {
-        padding: 40px 30px;
-    }
+            padding: 40px 30px;
+        }
     }
 
     &__img {
